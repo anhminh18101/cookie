@@ -257,7 +257,9 @@ namespace RuriLib
                 switch (action)
                 {
                     case ElementAction.Clear:
-                        element.Clear();
+                        element.Click();
+                        element.SendKeys(Keys.Control + "a");
+                        element.SendKeys(Keys.Delete);
                         break;
 
                     case ElementAction.SendKeys:
